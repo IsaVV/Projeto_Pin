@@ -1,4 +1,4 @@
-package com.projeto.pin.ordemProducao;
+package com.projeto.pin.ordemproducao;
 
 public class OrdemProducao {
 

@@ -1,4 +1,4 @@
-package com.projeto.pin.localCausador;
+package com.projeto.pin.localcausador;
 
 public class LocalCausador {
     private String nome;
