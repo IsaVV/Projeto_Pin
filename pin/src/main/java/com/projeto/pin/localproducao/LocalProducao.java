@@ -1,4 +1,4 @@
-package com.projeto.pin.localProducao;
+package com.projeto.pin.localproducao;
 
 public class LocalProducao {
     private String nome;

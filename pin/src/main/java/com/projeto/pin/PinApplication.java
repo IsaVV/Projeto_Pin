@@ -1,5 +1,7 @@
 package com.projeto.pin;
 
+import com.projeto.pin.registroparada.RegistroParada;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PinApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PinApplication.class, args);
+		RegistroParada registro = new RegistroParada();
+		registro.registrar();
+
 	}
 
 }
