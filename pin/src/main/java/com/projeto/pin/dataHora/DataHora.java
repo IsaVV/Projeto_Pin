@@ -1,6 +1,6 @@
 package com.projeto.pin.dataHora;
 
-public class dataHora {
+public class DataHora {
 
     private String dataInicio;
     private String dataFinal;

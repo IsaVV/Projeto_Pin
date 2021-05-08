@@ -1,6 +1,6 @@
 package com.projeto.pin.descricao;
 
-public class descricao {
+public class Descricao {
 
     private String descricao;
 
