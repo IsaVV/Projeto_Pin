@@ -86,5 +86,7 @@ public class RegistroParada {
         System.out.println("Descrição: ");
         String campoDescricao = input.next();
         descricao.setDescricao(campoDescricao);
+
+        input.close();
     }
 }
