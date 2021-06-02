@@ -7,6 +7,13 @@ public class DataHora {
     private String horaFinal;
     private String horaInicial;
 
+    DataHora(String dataInicio, String dataFinal, String horaInicial, String horaFinal) {
+        this.dataInicio = dataInicio;
+        this.dataFinal = dataFinal;
+        this.horaInicial = horaInicial;
+        this.horaFinal = horaFinal;
+    }
+
     public String getDataInicio() {
         return dataInicio;
     }

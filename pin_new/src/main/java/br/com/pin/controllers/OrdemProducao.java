@@ -6,6 +6,12 @@ public class OrdemProducao {
     private String material;
     private String sequencial;
 
+    OrdemProducao(String ordem, String material, String sequencial) {
+        this.ordem = ordem;
+        this.material = material;
+        this.sequencial = sequencial;
+    }
+
     public String getOrdem() {
         return ordem;
     }

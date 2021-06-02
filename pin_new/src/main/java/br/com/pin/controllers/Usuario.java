@@ -4,6 +4,11 @@ public class Usuario {
     public String nickname;
     private String senha;
 
+    Usuario(String nickname, String senha) {
+        this.nickname = nickname;
+        this.senha = senha;
+    }
+
     public String getNickname() {
         return nickname;
     }

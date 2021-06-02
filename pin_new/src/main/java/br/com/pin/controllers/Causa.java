@@ -5,10 +5,16 @@ public class Causa {
     private String atributo;
     private String disfuncao;
     
+    Causa(String tipo, String atributo, String disfuncao) {
+        this.tipo = tipo;
+        this.atributo = atributo;
+        this.disfuncao = disfuncao;
+    }
+
     public String getTipo() {
         return tipo;
     }
-    
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }

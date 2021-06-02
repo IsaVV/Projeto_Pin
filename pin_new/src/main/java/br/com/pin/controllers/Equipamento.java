@@ -5,6 +5,12 @@ public class Equipamento {
     private String local;
     private String tipo;
 
+    Equipamento(String nome, String local, String tipo) {
+        this.nome = nome;
+        this.local = local;
+        this.tipo = tipo;
+    }
+
     public String getNome() {
         return nome;
     }
