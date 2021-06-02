@@ -1,14 +1,26 @@
 package br.com.pin.controllers;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Equipamento {
+    
+    @Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Integer id;
     private String nome;
     private String local;
     private String tipo;
 
-    Equipamento(String nome, String local, String tipo) {
-        this.nome = nome;
-        this.local = local;
-        this.tipo = tipo;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {

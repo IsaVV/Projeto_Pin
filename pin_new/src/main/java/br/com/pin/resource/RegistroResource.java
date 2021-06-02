@@ -27,12 +27,12 @@ public class RegistroResource {
 	}
 	
 	@GetMapping("/{codigo}")
-	public RegistroParada buscarPeloCodigo(@PathVariable Long id) {
+	public RegistroParada buscarPeloCodigo(@PathVariable Integer id) {
 		return registroRepository.findById(id).orElse(null);
 	}
 	
 	@DeleteMapping
-	public void remover(@PathVariable Long id) {
+	public void remover(@PathVariable Integer id) {
 		registroRepository.deleteById(id);
 	}
 	

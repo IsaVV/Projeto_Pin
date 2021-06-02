@@ -1,17 +1,27 @@
 package br.com.pin.controllers;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class DataHora {
 
+    @Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Integer id;
     private String dataInicio;
     private String dataFinal;
     private String horaFinal;
     private String horaInicial;
 
-    DataHora(String dataInicio, String dataFinal, String horaInicial, String horaFinal) {
-        this.dataInicio = dataInicio;
-        this.dataFinal = dataFinal;
-        this.horaInicial = horaInicial;
-        this.horaFinal = horaFinal;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDataInicio() {

@@ -1,15 +1,26 @@
 package br.com.pin.controllers;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class OrdemProducao {
 
+    @Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Integer id;
     private String ordem;
     private String material;
     private String sequencial;
 
-    OrdemProducao(String ordem, String material, String sequencial) {
-        this.ordem = ordem;
-        this.material = material;
-        this.sequencial = sequencial;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getOrdem() {
