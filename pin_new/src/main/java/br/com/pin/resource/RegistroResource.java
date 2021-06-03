@@ -30,7 +30,22 @@ public class RegistroResource {
 	public RegistroParada buscarPeloCodigo(@PathVariable Integer id) {
 		return registroRepository.findById(id).orElse(null);
 	}
-	
+
+	@GetMapping("/local/{local}")
+	public List<RegistroParada> buscarPeloLocal(@PathVariable String local) {
+		return (List<RegistroParada>) registroRepository.findByLocalProducao(local);
+	}
+
+	@GetMapping("/componente/{componente}")
+	public List<RegistroParada> buscarPeloComponente(@PathVariable String componente) {
+		return (List<RegistroParada>) registroRepository.findByComponente(componente);
+	}
+
+	@GetMapping("/lote/{lote}")
+	public List<RegistroParada> buscarPeloLote(@PathVariable String lote) {
+		return (List<RegistroParada>) registroRepository.findByLote(lote);
+	}
+
 	@DeleteMapping
 	public void remover(@PathVariable Integer id) {
 		registroRepository.deleteById(id);
