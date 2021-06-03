@@ -14,6 +14,7 @@ public class OrdemProducao {
     private String ordem;
     private String material;
     private String sequencial;
+    private String turma;
 
     public Integer getId() {
         return id;
@@ -90,7 +91,4 @@ public class OrdemProducao {
             return false;
         return true;
     }
-    private String turma;
-
-    
 }

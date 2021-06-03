@@ -1,11 +1,12 @@
 package br.com.pin.controllers;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class RegistroParada {
@@ -14,19 +15,19 @@ public class RegistroParada {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Integer id;
     private String componente;
-    @ManyToOne
+    @OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name= "equipamento")
     private Equipamento equipamento;
-    @ManyToOne
+    @OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name= "causa")
     private Causa causa;
     private String localProducao;
     private String localCausador;
     private String lote;
-    @ManyToOne
+    @OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name= "hora")
     private DataHora dataHora;
-    @ManyToOne
+    @OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name= "ordemProducao")
     private OrdemProducao ordemProducao;
     private String descricao;
