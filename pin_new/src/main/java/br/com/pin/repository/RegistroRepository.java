@@ -18,4 +18,6 @@ public interface RegistroRepository extends JpaRepository<RegistroParada, Intege
     @Query("FROM RegistroParada WHERE lote = ?1")
     List<RegistroParada> findByLote(String lote);
 
+    @Query("FROM RegistroParada WHERE causa.tipo = ?1")
+    List<RegistroParada> findByCausaTipo(String tipo);
 }

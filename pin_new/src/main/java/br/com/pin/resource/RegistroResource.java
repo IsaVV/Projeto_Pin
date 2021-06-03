@@ -46,6 +46,11 @@ public class RegistroResource {
 		return (List<RegistroParada>) registroRepository.findByLote(lote);
 	}
 
+	@GetMapping("/causa/tipo/{tipo}")
+	public List<RegistroParada> buscarPeloCausaTipo(@PathVariable String tipo) {
+		return (List<RegistroParada>) registroRepository.findByCausaTipo(tipo);
+	}
+
 	@DeleteMapping
 	public void remover(@PathVariable Integer id) {
 		registroRepository.deleteById(id);
