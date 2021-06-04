@@ -31,9 +31,14 @@ public class RegistroResource {
 		return registroRepository.findById(id).orElse(null);
 	}
 
-	@GetMapping("/local/{local}")
-	public List<RegistroParada> buscarPeloLocal(@PathVariable String local) {
+	@GetMapping("/localProducao/{local}")
+	public List<RegistroParada> buscarPeloLocalProducao(@PathVariable String local) {
 		return (List<RegistroParada>) registroRepository.findByLocalProducao(local);
+	}
+
+	@GetMapping("/localCausador/{local}")
+	public List<RegistroParada> buscarPeloLocalCausador(@PathVariable String local) {
+		return (List<RegistroParada>) registroRepository.findByLocalCausador(local);
 	}
 
 	@GetMapping("/componente/{componente}")
@@ -49,6 +54,36 @@ public class RegistroResource {
 	@GetMapping("/causa/tipo/{tipo}")
 	public List<RegistroParada> buscarPeloCausaTipo(@PathVariable String tipo) {
 		return (List<RegistroParada>) registroRepository.findByCausaTipo(tipo);
+	}
+
+	@GetMapping("/causa/atributo/{atributo}")
+	public List<RegistroParada> buscarPeloCausaAtributo(@PathVariable String atributo) {
+		return (List<RegistroParada>) registroRepository.findByCausaAtributo(atributo);
+	}
+
+	@GetMapping("/causa/disfuncao/{disfuncao}")
+	public List<RegistroParada> buscarPeloCausaDisfuncao(@PathVariable String disfuncao) {
+		return (List<RegistroParada>) registroRepository.findByCausaDisfuncao(disfuncao);
+	}
+
+	@GetMapping("/dataHora/dataInicio/{data}")
+	public List<RegistroParada> buscarPeloDataHoraDataInicio(@PathVariable String data) {
+		return (List<RegistroParada>) registroRepository.findByDataHoraDataInicio(data);
+	}
+
+	@GetMapping("/dataHora/dataFinal/{data}")
+	public List<RegistroParada> buscarPeloDataHoraDataFinal(@PathVariable String data) {
+		return (List<RegistroParada>) registroRepository.findByDataHoraDataFinal(data);
+	}
+
+	@GetMapping("/dataHora/horaInicial/{hora}")
+	public List<RegistroParada> buscarPeloDataHoraHoraInicial(@PathVariable String hora) {
+		return (List<RegistroParada>) registroRepository.findByDataHoraHoraInicial(hora);
+	}
+
+	@GetMapping("/dataHora/horaFinal/{hora}")
+	public List<RegistroParada> buscarPeloDataHoraHoraFinal(@PathVariable String hora) {
+		return (List<RegistroParada>) registroRepository.findByDataHoraHoraFinal(hora);
 	}
 
 	@DeleteMapping
