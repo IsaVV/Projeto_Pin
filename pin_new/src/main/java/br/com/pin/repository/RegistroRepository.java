@@ -42,5 +42,26 @@ public interface RegistroRepository extends JpaRepository<RegistroParada, Intege
     @Query("FROM RegistroParada WHERE dataHora.horaFinal = ?1")
     List<RegistroParada> findByDataHoraHoraFinal(String horaFinal);
 
+    @Query("FROM RegistroParada WHERE equipamento.nome = ?1")
+    List<RegistroParada> findByEquipamenoNome(String nome);
+
+    @Query("FROM RegistroParada WHERE equipamento.local = ?1")
+    List<RegistroParada> findByEquipamenoLocal(String local);
+
+    @Query("FROM RegistroParada WHERE equipamento.tipo = ?1")
+    List<RegistroParada> findByEquipamenoTipo(String tipo);
+
+    @Query("FROM RegistroParada WHERE ordemProducao.ordem = ?1")
+    List<RegistroParada> findByOrdemProducaoOrdem(String ordem);
+
+    @Query("FROM RegistroParada WHERE ordemProducao.material = ?1")
+    List<RegistroParada> findByOrdemProducaoMaterial(String material);
+
+    @Query("FROM RegistroParada WHERE ordemProducao.sequencial = ?1")
+    List<RegistroParada> findByOrdemProducaoSequencial(String sequencial);
+
+    @Query("FROM RegistroParada WHERE ordemProducao.turma = ?1")
+    List<RegistroParada> findByOrdemProducaoTurma(String turma);
+
 
 }

@@ -86,6 +86,41 @@ public class RegistroResource {
 		return (List<RegistroParada>) registroRepository.findByDataHoraHoraFinal(hora);
 	}
 
+	@GetMapping("/equipamento/nome/{nome}")
+	public List<RegistroParada> buscarPeloEquipamentoNome(@PathVariable String nome) {
+		return (List<RegistroParada>) registroRepository.findByEquipamenoNome(nome);
+	}
+
+	@GetMapping("/equipamento/local/{local}")
+	public List<RegistroParada> buscarPeloEquipamentoLocal(@PathVariable String local) {
+		return (List<RegistroParada>) registroRepository.findByEquipamenoLocal(local);
+	}
+
+	@GetMapping("/equipamento/tipo/{tipo}")
+	public List<RegistroParada> buscarPeloEquipamentoTipo(@PathVariable String tipo) {
+		return (List<RegistroParada>) registroRepository.findByEquipamenoTipo(tipo);
+	}
+
+	@GetMapping("/ordemProducao/ordem/{ordem}")
+	public List<RegistroParada> buscarPeloOrdemProducaoOrdem(@PathVariable String ordem) {
+		return (List<RegistroParada>) registroRepository.findByOrdemProducaoOrdem(ordem);
+	}
+
+	@GetMapping("/ordemProducao/material/{material}")
+	public List<RegistroParada> buscarPeloOrdemProducaoMaterial(@PathVariable String material) {
+		return (List<RegistroParada>) registroRepository.findByOrdemProducaoMaterial(material);
+	}
+
+	@GetMapping("/ordemProducao/sequencial/{sequencial}")
+	public List<RegistroParada> buscarPeloOrdemProducaoSequencial(@PathVariable String sequencial) {
+		return (List<RegistroParada>) registroRepository.findByOrdemProducaoSequencial(sequencial);
+	}
+
+	@GetMapping("/ordemProducao/turma/{turma}")
+	public List<RegistroParada> buscarPeloOrdemProducaoTurma(@PathVariable String turma) {
+		return (List<RegistroParada>) registroRepository.findByOrdemProducaoTurma(turma);
+	}
+
 	@DeleteMapping
 	public void remover(@PathVariable Integer id) {
 		registroRepository.deleteById(id);
