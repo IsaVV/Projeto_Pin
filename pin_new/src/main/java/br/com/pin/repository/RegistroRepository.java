@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import br.com.pin.controllers.RegistroParada;
-
 public interface RegistroRepository extends JpaRepository<RegistroParada, Integer>{
     
     @Query("FROM RegistroParada WHERE localProducao = ?1")

@@ -26,7 +26,7 @@ public class RegistroResource {
 		return registroRepository.findAll();
 	}
 	
-	@GetMapping("/{codigo}")
+	@GetMapping("/{id}")
 	public RegistroParada buscarPeloCodigo(@PathVariable Integer id) {
 		return registroRepository.findById(id).orElse(null);
 	}
